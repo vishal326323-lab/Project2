@@ -1,14 +1,23 @@
 HEAD
+// Track cart count
 let cartCount = 0;
 
-function addToCart(item){
+// Track cart items
+let cartItems = [];
 
+// Function to add items to cart
+function addToCart(itemName) {
   cartCount++;
+  cartItems.push(itemName);
 
-  document.getElementById("cart-count").innerText = cartCount;
+  // Update cart count in navbar
+  document.getElementById("cart-count").textContent = cartCount;
 
-  alert(item + " added to cart!");
+  // Show confirmation message
+  console.log(itemName + " added to cart!");
+
 }
+
 
 /* CONTACT FORM */
 
@@ -33,4 +42,7 @@ document
 
   document.getElementById("contact-form").reset();
 
+  
+
+});
   
